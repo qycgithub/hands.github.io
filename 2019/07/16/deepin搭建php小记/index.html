@@ -10,6 +10,8 @@
 
     <!--Description-->
     
+        <meta name="description" content="XAMPP是一个把Apache网页服务器与PHP、Perl,phpMyAdmin及MariaDB集合在一起的安装包，允许用户可以在自己的电脑上轻易的建立网页服务器。 – 百科deepin用着感觉很轻量化，而且对新手比较友好，在这里简记一下安装php环境的过程和遇到的坑。大部分都是像官方文档里说的一样">
+    
 
     <!--Author-->
     
@@ -18,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Mr.Q_先森‘s blod">
+        <meta property="og:title" content="deepin 搭建php 安装">
     
 
     <!--Open Graph Description-->
@@ -29,7 +31,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -40,7 +42,7 @@
 
     <!-- Title -->
     
-    <title>-myeclipse - Mr.Q_先森‘s blod</title>
+    <title>deepin 搭建php 安装 - Mr.Q_先森‘s blod</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -115,9 +117,7 @@
 <div class="container">
 
     <!-- Main Content -->
-    
-
-<div class="row">
+    <div class="row">
     <div class="col-sm-12">
 
         <!--Title and Logo-->
@@ -125,25 +125,89 @@
     <div class="logo">
         <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
         
-            <h1 id="main-title" class="title">#-myeclipse</h1>
-        
     </div>
 </header>
 
-        <section class="main archive-container">
+        <section class="main">
             
-                <div class="archive-post">
-    <a href="/2019/07/16/Myeclipse 安装/">
-        <span class="archive-date">
-            Jul 2019
-        </span>
-        Myeclipse2017 安装
-    </a>
+<div class="post">
+
+    <div class="post-header">
+        <h1 class="title">
+            <a href="/2019/07/16/deepin搭建php小记/">
+                deepin 搭建php 安装
+            </a>
+        </h1>
+        <div class="post-info">
+            
+                <span class="date">2019-07-16</span>
+            
+            
+            
+                <span class="category">
+                    <a href="/categories/软件备忘/">软件备忘</a>
+                </span>
+            
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- Gallery -->
+        
+
+        <!-- Post Content -->
+        <p>XAMPP是一个把Apache网页服务器与PHP、Perl,phpMyAdmin及MariaDB集合在一起的安装包，允许用户可以在自己的电脑上轻易的建立网页服务器。 – 百科<br>deepin用着感觉很轻量化，而且对新手比较友好，在这里简记一下安装php环境的过程和遇到的坑。<br>大部分都是像官方文档里说的一样附上链接<a href="https://wiki.deepin.org/wiki/Deepin_%E6%90%AD%E5%BB%BAphp%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83" target="_blank" rel="noopener">https://wiki.deepin.org/wiki/Deepin_%E6%90%AD%E5%BB%BAphp%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83</a><br>如果不想看这个网页也可以看我的图<br>第一步： 当然是下载了   自己去官网或者点这个<a href="https://www.apachefriends.org" target="_blank" rel="noopener">https://www.apachefriends.org</a><br>第二步： 我们需要选择XAMPP for linux。此处以xampp-linux-x64-7.3.1-0-installer.run为例进行说明。</p>
+<p>下载到本地后，打开安装包所在文件夹（下载的文件就是.run的文件，在文件夹空白处右击鼠标选择在终端中打开。 然后在终端中执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./xampp-linux-x64-7.3.1-0-installer.run</span><br></pre></td></tr></table></figure>
+
+<p>运行后会出现用户界面  像win一样   默认就好了<br>安装完成之后， 程序会自动运行，此时需要手动点击进入manage server界面，点击启动全部选项。<br>第三步： 你要开启它<br>这里有几条命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo ./opt/lampp/lampp start              //启动</span><br><span class="line">sudo ./opt/lampp/lampp restart         // 重启</span><br><span class="line">sudo ./opt/lampp/lampp stop            //停止</span><br></pre></td></tr></table></figure>
+
+<p>这里要说一句，deepin安装完这个不会开机自启    每次开机后需要手动启动，当然你也可以去设置成开机自启<br>最后呢可能出现启动失败你可以修改一下它的端口号<br>或者关闭当前占用端口的程序，（这个我不推荐因为要开机后要每次关闭麻烦）<br><strong>修改端口号</strong><br>端口号修改的问题我参照了一个博客<br><a href="https://blog.csdn.net/sjg20010414/article/details/41777381" target="_blank" rel="noopener">点击</a><br>大概就是这样的<br>当然，另外一个做法是修改 apache 使用其他端口，可以参考网上的做法：</p>
+<ol>
+<li>Open the file /opt/lampp/etc/httpd.conf</li>
+</ol>
+<ol start="2">
+<li>Search the “Listen 80” and change it to some other port (e.g. Listen 2145)  (Line No. 40)</li>
+</ol>
+<ol start="3">
+<li>Open the file /opt/lampp/etc/extra/httpd-ssl.conf</li>
+</ol>
+<ol start="4">
+<li>Search the “Listen 443” and change it to some other port (e.g. Listen 16443) (Line No. 39)</li>
+</ol>
+<ol start="5">
+<li>Open the file “/opt/lampp/lampp”</li>
+</ol>
+<ol start="6">
+<li>Search for the port “testport 80” and replace it to “testport 2145”. Also change the “testport 443” to “testport 16443”. (Happens to be the Line No. 197, 214)</li>
+</ol>
+<ol start="7">
+<li>Now go and run “/opt/lampp/lampp start”. (It should work now).</li>
+</ol>
+<hr>
+
+    </div>
+
+    
+
+    
+        <div class="post-tags">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            <a href="/tags/web-PHP/">#-web -PHP</a>
+        </div>
+    
+
+    <!-- Comments -->
+    
+
 </div>
-            
         </section>
+
     </div>
 </div>
+
 
 </div>
 
