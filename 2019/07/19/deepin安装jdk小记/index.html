@@ -134,13 +134,13 @@
 
     <div class="post-header">
         <h1 class="title">
-            <a href="/2019/07/16/deepin安装jdk小记/">
+            <a href="/2019/07/19/deepin安装jdk小记/">
                 Deepin下(liunx)安装jdk
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2019-07-16</span>
+                <span class="date">2019-07-19</span>
             
             
                 <a href="#disqus_thread" class="comments">留言</a>
@@ -161,8 +161,14 @@
         <!-- Post Content -->
         <p>今天小编也装上了deepin但是不会安装jdk，在翻阅了大量博客以后有些能用有些不能用终于找到了比较稳妥的办法。在这里我小记一下   要是失效了联系我</p>
 <a id="more"></a> 
-
-<p><img src="https://img-blog.csdnimg.cn/2019071517075411.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190715170813672.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2019071517082275.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190715170833976.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2019071517084344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190715170852370.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190715170901762.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>在这里值得注意的是    修改完文件后  按esc在可视模式下按：wqa  可以保存退出</p>
+<p>先下载</p>
+<p><a href="https://ae01.alicdn.com/kf/HTB1iyfvaUT1gK0jSZFh761AtVXab.png" target="_blank" rel="noopener"><img src="https://ae01.alicdn.com/kf/HTB1iyfvaUT1gK0jSZFh761AtVXab.png" alt></a></p>
+<p>然后解压<br>也可以用命令  在下载目录下执行<br>$ tar -xf jdk-8u151-linux-x64.tar.gz<br>然后移到你想要安装的目录  任意的   sudo mv ./jdk………/opt/<br>当然也可以手动    一样的<br>设置环境变量<br>$ sudo vim /etc/profile<br>进入后<br>在文件末尾写入jdk的路径，把第一行=后面的路径改为你jdk的路径就可以了<br>JAVA_HOME=/opt/jdk1.8.0_151<br>export PATH=$JAVA_HOME/bin:$PATH<br>export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</p>
+<p><a href="https://ae01.alicdn.com/kf/HTB1KUHwaHr1gK0jSZR0762P8XXaB.png" target="_blank" rel="noopener"><img src="https://ae01.alicdn.com/kf/HTB1KUHwaHr1gK0jSZR0762P8XXaB.png" alt></a></p>
+<p>在这里值得注意的是如果失败了仔细检查路径  别问我怎么知道的   哈哈！    修改完文件后  按esc在可视模式下按：wqa  可以保存退出<br>最后呢<br>输入命令使其生效<br>source /etc/profile</p>
+<p>最后检查一下是否成功</p>
+<p><a href="https://ae01.alicdn.com/kf/HTB1.S6waQT2gK0jSZFk763IQFXac.png" target="_blank" rel="noopener"><img src="https://ae01.alicdn.com/kf/HTB1.S6waQT2gK0jSZFk763IQFXac.png" alt></a></p>
+<p><a href="https://ae01.alicdn.com/kf/HTB1id6waNn1gK0jSZKP760vUXXao.png" target="_blank" rel="noopener"><img src="https://ae01.alicdn.com/kf/HTB1id6waNn1gK0jSZKP760vUXXao.png" alt></a></p>
 
     </div>
 
@@ -215,15 +221,15 @@
         <ul>
             
             <li>
+                <a class="footer-post" href="/2019/07/19/deepin安装jdk小记/">Deepin下(liunx)安装jdk</a>
+            </li>
+            
+            <li>
                 <a class="footer-post" href="/2019/07/18/scratch/">Dell新版bios的U盘启动设置方法</a>
             </li>
             
             <li>
                 <a class="footer-post" href="/2019/07/18/Myeclipse 安装/">Myeclipse2017 安装</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2019/07/16/deepin安装jdk小记/">Deepin下(liunx)安装jdk</a>
             </li>
             
             <li>
