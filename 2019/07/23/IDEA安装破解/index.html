@@ -10,7 +10,8 @@
 
     <!--Description-->
     
-        <meta name="description" content="今天小编也装上了deepin但是不会安装jdk，在翻阅了大量博客以后有些能用有些不能用终于找到了比较稳妥的办法。在这里我小记一下   要是失效了联系我">
+        <meta name="description" content="参考这个大兄弟的博客:https://blog.csdn.net/qq_34668897/article/details/88251913可以打扮一下我们的外观:https://blog.csdn.net/github_39577257/article/details/80629750下载  使用   参考即可
+补充  deepin 下的idea">
     
 
     <!--Author-->
@@ -20,7 +21,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Deepin下(liunx)安装jdk">
+        <meta property="og:title" content="deepin or win10 IDEA">
     
 
     <!--Open Graph Description-->
@@ -42,7 +43,7 @@
 
     <!-- Title -->
     
-    <title>Deepin下(liunx)安装jdk - Mr.Q_先森‘s blod</title>
+    <title>deepin or win10 IDEA - Mr.Q_先森‘s blod</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -134,13 +135,13 @@
 
     <div class="post-header">
         <h1 class="title">
-            <a href="/2019/07/19/deepin安装jdk小记/">
-                Deepin下(liunx)安装jdk
+            <a href="/2019/07/23/IDEA安装破解/">
+                deepin or win10 IDEA
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2019-07-19</span>
+                <span class="date">2019-07-23</span>
             
             
                 <a href="#disqus_thread" class="comments">留言</a>
@@ -159,16 +160,12 @@
         
 
         <!-- Post Content -->
-        <p>今天小编也装上了deepin但是不会安装jdk，在翻阅了大量博客以后有些能用有些不能用终于找到了比较稳妥的办法。在这里我小记一下   要是失效了联系我</p>
+        <p>参考这个大兄弟的博客:<br><a href="https://blog.csdn.net/qq_34668897/article/details/88251913" target="_blank" rel="noopener">https://blog.csdn.net/qq_34668897/article/details/88251913</a><br>可以打扮一下我们的外观:<br><a href="https://blog.csdn.net/github_39577257/article/details/80629750" target="_blank" rel="noopener">https://blog.csdn.net/github_39577257/article/details/80629750</a><br>下载  使用   参考即可</p>
+<p>补充  deepin 下的idea</p>
 <a id="more"></a> 
-<p>先下载</p>
-<p><a href="https://ae01.alicdn.com/kf/HTB1iyfvaUT1gK0jSZFh761AtVXab.png" target="_blank" rel="noopener"><img src="https://ae01.alicdn.com/kf/HTB1iyfvaUT1gK0jSZFh761AtVXab.png" alt></a></p>
-<p>然后解压<br>也可以用命令  在下载目录下执行<br>$ tar -xf jdk-8u151-linux-x64.tar.gz<br>然后移到你想要安装的目录  任意的   sudo mv ./jdk………/opt/<br>当然也可以手动    一样的<br>设置环境变量<br>$ sudo vim /etc/profile<br>进入后<br>在文件末尾写入jdk的路径，把第一行=后面的路径改为你jdk的路径就可以了<br>JAVA_HOME=/opt/jdk1.8.0_151<br>export PATH=$JAVA_HOME/bin:$PATH<br>export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</p>
-<p><a href="https://ae01.alicdn.com/kf/HTB1KUHwaHr1gK0jSZR0762P8XXaB.png" target="_blank" rel="noopener"><img src="https://ae01.alicdn.com/kf/HTB1KUHwaHr1gK0jSZR0762P8XXaB.png" alt></a></p>
-<p>在这里值得注意的是如果失败了仔细检查路径  别问我怎么知道的   哈哈！    修改完文件后  按esc在可视模式下按：wqa  可以保存退出<br>最后呢<br>输入命令使其生效<br>source /etc/profile</p>
-<p>最后检查一下是否成功</p>
-<p><a href="https://ae01.alicdn.com/kf/HTB1.S6waQT2gK0jSZFk763IQFXac.png" target="_blank" rel="noopener"><img src="https://ae01.alicdn.com/kf/HTB1.S6waQT2gK0jSZFk763IQFXac.png" alt></a></p>
-<p><a href="https://ae01.alicdn.com/kf/HTB1id6waNn1gK0jSZKP760vUXXao.png" target="_blank" rel="noopener"><img src="https://ae01.alicdn.com/kf/HTB1id6waNn1gK0jSZKP760vUXXao.png" alt></a></p>
+
+<p> 其实和上面的差不多<br> 可以结合以下两篇文章<br> <a href="https://blog.csdn.net/aoaljl/article/details/88288949" target="_blank" rel="noopener">https://blog.csdn.net/aoaljl/article/details/88288949</a><br> 和<br> <a href="https://blog.csdn.net/li_xiao_ming/article/details/90416447" target="_blank" rel="noopener">https://blog.csdn.net/li_xiao_ming/article/details/90416447</a></p>
+<p>其中注意的是你要记得你的安装目录   修改文件的位置是一样的</p>
 
     </div>
 
@@ -177,7 +174,7 @@
     
         <div class="post-tags">
             <i class="fa fa-tags" aria-hidden="true"></i>
-            <a href="/tags/jdk/">#-jdk</a>
+            <a href="/tags/IDEA/">#-IDEA</a>
         </div>
     
 
@@ -221,19 +218,19 @@
         <ul>
             
             <li>
-                <a class="footer-post" href="/2019/07/19/deepin安装node.js的问题/">deepin安装nodejs的问题小记</a>
+                <a class="footer-post" href="/2019/07/23/dd/">Untitled</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2019/07/19/deepin安装jdk小记/">Deepin下(liunx)安装jdk</a>
+                <a class="footer-post" href="/2019/07/23/scratch/">Dell新版bios的U盘启动设置方法</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2019/07/18/scratch/">Dell新版bios的U盘启动设置方法</a>
+                <a class="footer-post" href="/2019/07/23/Myeclipse 安装/">Myeclipse2017 安装</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2019/07/18/Myeclipse 安装/">Myeclipse2017 安装</a>
+                <a class="footer-post" href="/2019/07/23/IDEA安装破解/">deepin or win10 IDEA</a>
             </li>
             
         </ul>

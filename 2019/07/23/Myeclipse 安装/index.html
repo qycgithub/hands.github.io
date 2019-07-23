@@ -10,7 +10,7 @@
 
     <!--Description-->
     
-        <meta name="description" content="XAMPP是一个把Apache网页服务器与PHP、Perl,phpMyAdmin及MariaDB集合在一起的安装包，允许用户可以在自己的电脑上轻易的建立网页服务器。 – 百科deepin用着感觉很轻量化，而且对新手比较友好，在这里简记一下安装php环境的过程和遇到的坑。">
+        <meta name="description" content="本教程的示例是Myeclipse 2017  其他版本可能有些不一样但是 基本差不多  加上小编有点钟爱2017接下来我们就开始了">
     
 
     <!--Author-->
@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="deepin 搭建php 安装">
+        <meta property="og:title" content="Myeclipse2017 安装">
     
 
     <!--Open Graph Description-->
@@ -42,7 +42,7 @@
 
     <!-- Title -->
     
-    <title>deepin 搭建php 安装 - Mr.Q_先森‘s blod</title>
+    <title>Myeclipse2017 安装 - Mr.Q_先森‘s blod</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
@@ -134,13 +134,13 @@
 
     <div class="post-header">
         <h1 class="title">
-            <a href="/2019/07/16/deepin搭建php小记/">
-                deepin 搭建php 安装
+            <a href="/2019/07/23/Myeclipse 安装/">
+                Myeclipse2017 安装
             </a>
         </h1>
         <div class="post-info">
             
-                <span class="date">2019-07-16</span>
+                <span class="date">2019-07-23</span>
             
             
                 <a href="#disqus_thread" class="comments">留言</a>
@@ -159,39 +159,17 @@
         
 
         <!-- Post Content -->
-        <p>XAMPP是一个把Apache网页服务器与PHP、Perl,phpMyAdmin及MariaDB集合在一起的安装包，允许用户可以在自己的电脑上轻易的建立网页服务器。 – 百科<br>deepin用着感觉很轻量化，而且对新手比较友好，在这里简记一下安装php环境的过程和遇到的坑。</p>
+        <p>本教程的示例是Myeclipse 2017  其他版本可能有些不一样但是 基本差不多  加上小编有点钟爱2017<br>接下来我们就开始了</p>
 <a id="more"></a> 
 
-<p>大部分都是像官方文档里说的一样附上链接<a href="https://wiki.deepin.org/wiki/Deepin_%E6%90%AD%E5%BB%BAphp%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83" target="_blank" rel="noopener">https://wiki.deepin.org/wiki/Deepin_%E6%90%AD%E5%BB%BAphp%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83</a><br>如果不想看这个网页也可以看我的图<br>第一步： 当然是下载了   自己去官网或者点这个<a href="https://www.apachefriends.org" target="_blank" rel="noopener">https://www.apachefriends.org</a><br>第二步： 我们需要选择XAMPP for linux。此处以xampp-linux-x64-7.3.1-0-installer.run为例进行说明。</p>
-<p>下载到本地后，打开安装包所在文件夹（下载的文件就是.run的文件，在文件夹空白处右击鼠标选择在终端中打开。 然后在终端中执行以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ./xampp-linux-x64-7.3.1-0-installer.run</span><br></pre></td></tr></table></figure>
-
-<p>运行后会出现用户界面  像win一样   默认就好了<br>安装完成之后， 程序会自动运行，此时需要手动点击进入manage server界面，点击启动全部选项。<br>第三步： 你要开启它<br>这里有几条命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo ./opt/lampp/lampp start              //启动</span><br><span class="line">sudo ./opt/lampp/lampp restart         // 重启</span><br><span class="line">sudo ./opt/lampp/lampp stop            //停止</span><br></pre></td></tr></table></figure>
-
-<p>这里要说一句，deepin安装完这个不会开机自启    每次开机后需要手动启动，当然你也可以去设置成开机自启<br>最后呢可能出现启动失败你可以修改一下它的端口号<br>或者关闭当前占用端口的程序，（这个我不推荐因为要开机后要每次关闭麻烦）<br><strong>修改端口号</strong><br>端口号修改的问题我参照了一个博客<br><a href="https://blog.csdn.net/sjg20010414/article/details/41777381" target="_blank" rel="noopener">点击</a><br>大概就是这样的<br>当然，另外一个做法是修改 apache 使用其他端口，可以参考网上的做法：</p>
-<ol>
-<li>Open the file /opt/lampp/etc/httpd.conf</li>
-</ol>
-<ol start="2">
-<li>Search the “Listen 80” and change it to some other port (e.g. Listen 2145)  (Line No. 40)</li>
-</ol>
-<ol start="3">
-<li>Open the file /opt/lampp/etc/extra/httpd-ssl.conf</li>
-</ol>
-<ol start="4">
-<li>Search the “Listen 443” and change it to some other port (e.g. Listen 16443) (Line No. 39)</li>
-</ol>
-<ol start="5">
-<li>Open the file “/opt/lampp/lampp”</li>
-</ol>
-<ol start="6">
-<li>Search for the port “testport 80” and replace it to “testport 2145”. Also change the “testport 443” to “testport 16443”. (Happens to be the Line No. 197, 214)</li>
-</ol>
-<ol start="7">
-<li>Now go and run “/opt/lampp/lampp start”. (It should work now).</li>
-</ol>
-<hr>
+<p>首先我们要下载<br>jdk  (我这是jdk1<br>8)<br>MyEclipse 2017<br>破解文件<br>汉化文件<br>开始了<br>先要装jdk哦!  装过的就跳过吧<br>首先要打开系统环境变量配置的页面。具体操作是：打开开始菜单，找到“此电脑”，然后右键“更多”→“属性”<br>在弹出的页面，选择“高级系统设置”。<br>在弹出的页面，选择“环境变量（N）…”。<br>在弹出的页面，系统变量区域，选择“新建”<br>在新建页面，输入变量名“JAVA_HOME”；变量值“你的jdk的路径（请参照下图，找到你的安装路径）”，然后点击“确定”。<br>在系统变量区域，选择“新建”，输入变量名“CLASSPATH”；变量值：“.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;”。请注意变量值中，前面的“点“和”分号”，可以直接复制此变量值。然后点击“确定”。<br>通过滚轴，在系统变量区域找到“Path”变量，并双击打开。点击新建，添加如下两行代码（红色选择框中的两行代码<br>使用Windows图标+R，快速打开“运行”操作界面，并输入cmd，回车确认。<br>在命令行输入java –version；如果能显示java的版本信息，则表示配置成功。<br><a href="https://i.loli.net/2019/07/18/5d2ff8331cfad70575.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/07/18/5d2ff8331cfad70575.png" alt="深度截图_选择区域_20190718123617.png"></a><br>jdk装完了 我们就可以 装Myeclipse 了<br>下载好  选择版本(64 or32 )安装位置什么的  最后的时候 把对勾去掉  这个很重要哦  不去掉就会启动  这是不行的  </p>
+<p>打开破解文件<br>patch 的文件全部复制到安装目录的  plugins里覆盖粘贴<br>打开crack key</p>
+<p>选择blue</p>
+<p>点击两次systemld</p>
+<p>点击Active</p>
+<p><a href="https://i.loli.net/2019/07/18/5d2ff8a037c1990790.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/07/18/5d2ff8a037c1990790.png" alt="深度截图_选择区域_20190718123636.png"></a><br>然后打开重启myeclipse2017破解就完成了<br>接下来就是汉化了<br>MyEclipse 10.1正式版中文汉化教程<br>有了汉化包我们开始汉化吧，需要照我的步骤来。<br>切记：安装目录不要出现带空格的文件夹</p>
+<h2 id="1：把下载好的汉化包里的language的文件夹全粘贴到到你安装的MyEclipse-10-1里面的Common文件夹-如果没有-就创建一个-。"><a href="#1：把下载好的汉化包里的language的文件夹全粘贴到到你安装的MyEclipse-10-1里面的Common文件夹-如果没有-就创建一个-。" class="headerlink" title="1：把下载好的汉化包里的language的文件夹全粘贴到到你安装的MyEclipse 10.1里面的Common文件夹(如果没有,就创建一个)。"></a>1：把下载好的汉化包里的language的文件夹全粘贴到到你安装的MyEclipse 10.1里面的Common文件夹(如果没有,就创建一个)。</h2><p>2：把压缩包里面的CreatePluginsConfig.java里面的代码复制如下面一样。<br>注意上面C:\Program Files\Genuitec\Common\language\plugins的路径要改成你电脑安装MyEclipse 10.1的路径，把红色的路径地址替换成你的，注意在每个”&quot;多加一个”&quot;，比如我的安装路径是c:\soft\就要改成c:\soft\。<br>3：创建一个项目，在项目里面建立一个CreatePluginsConfig类，把上面的代码复制进去，记得修改你的插件路径。<br>4：运行你的CreatePluginsConfig类，然后在控制台下面会输出一大串英文。这时要全部把控制台输出的英文都复制到<br>C:\Program Files\Genuitec\MyEclipse 9.0\configuration\org.eclipse.equinox.simpleconfigurator ,用记事本把bundles.info 打开，在最后一行回车一下。把刚才在控制台里面的内容都粘贴进去保存。MyEclipse 10.1的文件夹是你MyEclipse 10.1运行路径看图1。</p>
+<p>图片1<br>如果你的MyEclipse运行的文件夹不是MyEclipse 10.1的话就看一下你的运行路径是什么按照上面的路径打开bundles.info 文件就行了。这个很重要因为有2个configuration文件夹件，怕大家进错了，所以要注意是MyEclipse运行文件夹里的configuration。<br>5：找到MyEclipse 10.1的目录下找到myeclipse.ini文件，文件就图1的里面的位置。用记事本打开在最后一行加多一条语句<br>-Duser.language=zh<br>6：保存，启动你的MyEclipse吧<br><a href="https://i.loli.net/2019/07/18/5d2ff8f3c6e4540813.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/07/18/5d2ff8f3c6e4540813.png" alt="深度截图_选择区域_20190718123654.png"></a><br>这里你就可以看到中文的界面了，祝你成功。</p>
 
     </div>
 
@@ -200,7 +178,7 @@
     
         <div class="post-tags">
             <i class="fa fa-tags" aria-hidden="true"></i>
-            <a href="/tags/web-PHP/">#-web -PHP</a>
+            <a href="/tags/myeclipse/">#-myeclipse</a>
         </div>
     
 
@@ -244,19 +222,19 @@
         <ul>
             
             <li>
-                <a class="footer-post" href="/2019/07/19/deepin安装node.js的问题/">deepin安装nodejs的问题小记</a>
+                <a class="footer-post" href="/2019/07/23/dd/">Untitled</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2019/07/19/deepin安装jdk小记/">Deepin下(liunx)安装jdk</a>
+                <a class="footer-post" href="/2019/07/23/scratch/">Dell新版bios的U盘启动设置方法</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2019/07/18/scratch/">Dell新版bios的U盘启动设置方法</a>
+                <a class="footer-post" href="/2019/07/23/Myeclipse 安装/">Myeclipse2017 安装</a>
             </li>
             
             <li>
-                <a class="footer-post" href="/2019/07/18/Myeclipse 安装/">Myeclipse2017 安装</a>
+                <a class="footer-post" href="/2019/07/23/IDEA安装破解/">deepin or win10 IDEA</a>
             </li>
             
         </ul>
