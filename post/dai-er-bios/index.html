@@ -31,29 +31,9 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            温故而知新
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
+          <div class="toc-container hidden lg:block">
             
           </div>
         </div>
@@ -98,92 +78,57 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="remixicon-archive-line"></i> 文章归档
-        </h2>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">戴尔 BIOS</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2019-11-07 / 1 min read
+        </div>
+        
+        <div class="post-content yue">
+          <p>今天记录一下新版bios<br></p>
+<!--more-->
+<p>1.首先笔记本开机，按F2进入BIOS界面。<br><br>
+2.按照图示点开Secure Boot，选中Secure Boot Enable，在右侧取消勾选Secure Boot Enable。</p>
+<p><a href="https://ae01.alicdn.com/kf/HTB1cmA7auP2gK0jSZFo761uIVXaG.png"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9hZTAxLmFsaWNkbi5jb20va2YvSFRCMWNtQTdhdVAyZ0swalNaRm83NjF1SVZYYUcucG5n" alt=""></a><br>
+3.在右下角点击Apply保存，重启电脑，再次按F2进入BIOS。<br>
+4.按照图示选中Advanced Boot Options，右侧勾选Enable Legacy Option ROMs。<br>
+<a href="https://imgchr.com/i/ZLd25V"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9zMi5heDF4LmNvbS8yMDE5LzA3LzE3L1pMZDI1Vi50aC5wbmc" alt="ZLd25V.th.png"></a><br>
+5.再选择图示1处：Boot Sequence，右侧选择Legacy，在图示3处出现U盘选项，将U盘选项上移到第一选项。<br>
+<a href="https://imgchr.com/i/ZLdWCT"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9zMi5heDF4LmNvbS8yMDE5LzA3LzE3L1pMZFdDVC50aC5wbmc" alt="ZLdWCT.th.png"></a><br>
+6.U盘设置为第一选项后，再次选择UEFI模式，此时，图示3处显示UEFI模式U盘启动，点击Apply保存，插入U盘启动盘，重启电脑，下面就可以正常安装Win8、Win10了。。。。<br>
+<a href="https://imgchr.com/i/ZLdh2F"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9zMi5heDF4LmNvbS8yMDE5LzA3LzE3L1pMZGgyRi50aC5wbmc" alt="ZLdh2F.th.png"></a></p>
+
+        </div>
+
         
 
-        <div class="archives-container">
+
+        <div class="flex justify-between py-8">
           
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="remixicon-map-pin-time-line"></i>
-              2019
-            </h2>
-            
-              
-                <a href="https://qycgithub.github.io//post/da-jian-bu-tong-de-she-bei-bo-ke" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    搭建不同的设备博客
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-11-07</div>
-              
-            
-              
-                <a href="https://qycgithub.github.io//post/webstorm-an-zhuang" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    webstorm安装
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-11-07</div>
-              
-            
-              
-                <a href="https://qycgithub.github.io//post/dai-er-bios" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    戴尔 BIOS
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-11-07</div>
-              
-            
-              
-                <a href="https://qycgithub.github.io//post/myeclipse-an-zhuang" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Myeclipse 安装
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-11-07</div>
-              
-            
-              
-                <a href="https://qycgithub.github.io//post/idea-an-zhuang-po-jie" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    IDEA安装破解
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-11-07</div>
-              
-            
-              
-                <a href="https://qycgithub.github.io//post/deepin-an-zhuang-node" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    deepin安装node
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-11-07</div>
-              
-            
-              
-                <a href="https://qycgithub.github.io//post/deepin-an-zhuang-jdk-xiao-ji" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    deepin安装jdk小记
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2019-11-07</div>
-              
-            
+            <div class="prev-post">
+              <a href="https://qycgithub.github.io//post/webstorm-an-zhuang">
+                <h3 class="post-title">
+                  <i class="remixicon-arrow-left-line"></i>
+                  webstorm安装
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://qycgithub.github.io//post/myeclipse-an-zhuang">
+                <h3 class="post-title">
+                  Myeclipse 安装
+                  <i class="remixicon-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
 
-        <div>
-          <div class="pagination-container animated fadeIn">
-  
-  
-</div>
+        
 
-        </div>
       </div>
     </div>
 

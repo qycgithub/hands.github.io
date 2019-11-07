@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qycgithub.github.io/</id>
     <title>一个慵懒的人</title>
-    <updated>2019-11-07T06:13:14.263Z</updated>
+    <updated>2019-11-07T06:35:21.736Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qycgithub.github.io/"/>
     <link rel="self" href="https://qycgithub.github.io//atom.xml"/>
@@ -11,35 +11,192 @@
     <icon>https://qycgithub.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, 一个慵懒的人</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://qycgithub.github.io//post/hello-gridea</id>
-        <link href="https://qycgithub.github.io//post/hello-gridea">
+        <title type="html"><![CDATA[搭建不同的设备博客]]></title>
+        <id>https://qycgithub.github.io//post/da-jian-bu-tong-de-she-bei-bo-ke</id>
+        <link href="https://qycgithub.github.io//post/da-jian-bu-tong-de-she-bei-bo-ke">
         </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <updated>2019-11-07T06:30:54.000Z</updated>
+        <summary type="html"><![CDATA[<p>今天记录一下怎么在不同设备上管理博客<br><br>
+为什么要折腾这样呢？也许我们可能在某个时候不能用当时的hexo环境机器写博客，或者换了系统了本文就是这样，在这里我自己记录一下</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+        <content type="html"><![CDATA[<p>今天记录一下怎么在不同设备上管理博客<br><br>
+为什么要折腾这样呢？也许我们可能在某个时候不能用当时的hexo环境机器写博客，或者换了系统了本文就是这样，在这里我自己记录一下</p>
+<!--more-->
+<br>
+此方法只适用有原文件的。。
+win10环境下
+首先我们要在新环境下安装git 和 node.js<br>
+然后我们要把自己的博客文件拷贝一下  （ 可以一直更新云盘  ）到目标目录
+<br>
+在新目录里启动命令行 cmd
+<br>
+安装hexo
+   npm install hexo-cli -g //如果出错，
+   npm install -g hexo 或者sudo npm install -g hexo
+<br>
+在新博客下安装依赖
+<br>
+npm install
+npm install hexo-deployer-git --save  // 文章部署到 git 的模块
+<br>
+测试
+这时候使用 hexo s 基本可以看到你新添加的文章了。
+<p>然后 GITHUB 添加 SSH KEYS<br>
+在GitHub的ssh keys那里再添加一个当前电脑的环境生成的key，但是可别把原来的电脑删掉了啊。<br>
+首先在本地创建 SSH Keys:<br>
+$ ssh-keygen -t rsa -C “xxxx@163.com“<br>
+后面的邮箱即为 github 注册邮箱，也是你登录 Github 的邮箱，之后会要求确认路径和输入密码，一路回车就行。</p>
+<p>成功的话会在 ~/下生成 .ssh文件夹，进去，打开 id_rsa.pub，复制里面的key即可。然后拷贝到 Github 的 SSH Keys(这里要添加一个新的)</p>
+<p>然后在终端中，我们再次测试下公钥有没有添加成功：ssh -T git@github.com</p>
+<p>成功</p>
+<p>接下来，就可以正常创建，或者更新博客啦。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[webstorm安装]]></title>
+        <id>https://qycgithub.github.io//post/webstorm-an-zhuang</id>
+        <link href="https://qycgithub.github.io//post/webstorm-an-zhuang">
+        </link>
+        <updated>2019-11-07T06:30:23.000Z</updated>
+        <content type="html"><![CDATA[<p>下载后解压，点击exe文件安装</p>
+<p>将resources_cn.jar文件拷贝到安装后文件夹下的lib文件夹下</p>
+<p>运行桌面快捷程序，注册时选择“license server” 输入 &quot;http://idea.imsxm.com/&quot;或者“http://idea.iteblog.com/key.php”，点击Activate激活就行</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[戴尔 BIOS]]></title>
+        <id>https://qycgithub.github.io//post/dai-er-bios</id>
+        <link href="https://qycgithub.github.io//post/dai-er-bios">
+        </link>
+        <updated>2019-11-07T06:29:45.000Z</updated>
+        <summary type="html"><![CDATA[<p>今天记录一下新版bios<br></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>今天记录一下新版bios<br></p>
+<!--more-->
+<p>1.首先笔记本开机，按F2进入BIOS界面。<br><br>
+2.按照图示点开Secure Boot，选中Secure Boot Enable，在右侧取消勾选Secure Boot Enable。</p>
+<p><a href="https://ae01.alicdn.com/kf/HTB1cmA7auP2gK0jSZFo761uIVXaG.png"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9hZTAxLmFsaWNkbi5jb20va2YvSFRCMWNtQTdhdVAyZ0swalNaRm83NjF1SVZYYUcucG5n" alt=""></a><br>
+3.在右下角点击Apply保存，重启电脑，再次按F2进入BIOS。<br>
+4.按照图示选中Advanced Boot Options，右侧勾选Enable Legacy Option ROMs。<br>
+<a href="https://imgchr.com/i/ZLd25V"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9zMi5heDF4LmNvbS8yMDE5LzA3LzE3L1pMZDI1Vi50aC5wbmc" alt="ZLd25V.th.png"></a><br>
+5.再选择图示1处：Boot Sequence，右侧选择Legacy，在图示3处出现U盘选项，将U盘选项上移到第一选项。<br>
+<a href="https://imgchr.com/i/ZLdWCT"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9zMi5heDF4LmNvbS8yMDE5LzA3LzE3L1pMZFdDVC50aC5wbmc" alt="ZLdWCT.th.png"></a><br>
+6.U盘设置为第一选项后，再次选择UEFI模式，此时，图示3处显示UEFI模式U盘启动，点击Apply保存，插入U盘启动盘，重启电脑，下面就可以正常安装Win8、Win10了。。。。<br>
+<a href="https://imgchr.com/i/ZLdh2F"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9zMi5heDF4LmNvbS8yMDE5LzA3LzE3L1pMZGgyRi50aC5wbmc" alt="ZLdh2F.th.png"></a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Myeclipse 安装]]></title>
+        <id>https://qycgithub.github.io//post/myeclipse-an-zhuang</id>
+        <link href="https://qycgithub.github.io//post/myeclipse-an-zhuang">
+        </link>
+        <updated>2019-11-07T06:29:21.000Z</updated>
+        <content type="html"><![CDATA[<p>#Myeclipse 安装记录<br>
+##本教程的示例是Myeclipse 2017  其他版本可能有些不一样但是 基本差不多  加上小编有点钟爱2017<br>
+接下来我们就开始了<br>
+首先我们要下载<br>
+jdk  (我这是jdk1<br>
+8)<br>
+MyEclipse 2017<br>
+破解文件<br>
+汉化文件<br>
+开始了<br>
+先要装jdk哦!  装过的就跳过吧<br>
+首先要打开系统环境变量配置的页面。具体操作是：打开开始菜单，找到“此电脑”，然后右键“更多”→“属性”<br>
+在弹出的页面，选择“高级系统设置”。<br>
+在弹出的页面，选择“环境变量（N）…”。<br>
+在弹出的页面，系统变量区域，选择“新建”<br>
+在新建页面，输入变量名“JAVA_HOME”；变量值“你的jdk的路径（请参照下图，找到你的安装路径）”，然后点击“确定”。<br>
+在系统变量区域，选择“新建”，输入变量名“CLASSPATH”；变量值：“.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;”。请注意变量值中，前面的“点“和”分号”，可以直接复制此变量值。然后点击“确定”。<br>
+通过滚轴，在系统变量区域找到“Path”变量，并双击打开。点击新建，添加如下两行代码（红色选择框中的两行代码<br>
+使用Windows图标+R，快速打开“运行”操作界面，并输入cmd，回车确认。<br>
+在命令行输入java –version；如果能显示java的版本信息，则表示配置成功。<br>
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-sTc4KRKy-1573107676287)(http://m.qpic.cn/psb?/V10FWoOm1Nvofp/3H4kWDqpsF6ekHo8iZhcZ2QMPV97fQt4wdk4UvubTFc!/b/dL8AAAAAAAAA&amp;bo=SQKsAUkCrAEDCSw!&amp;rf=viewer_4&amp;t=5)]<br>
+[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-MtxAK5s9-1573107676289)(http://m.qpic.cn/psb?/V10FWoOm1Nvofp/dBHbghuBWvBVREUZRdvA5l2DNYDFdSN7e8pROkT67Ek!/b/dFIBAAAAAAAA&amp;bo=VwKTAVcCkwEDGTw!&amp;rf=viewer_4&amp;t=5)][外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-9IkGW8eo-1573107676291)(http://m.qpic.cn/psb?/V10FWoOm1Nvofp/4MFnzM*.PIZdZSFYPHETasfEat.OwST5z17B3rdi7ys!/b/dIMAAAAAAAAA&amp;bo=TwKZAU8CmQEDGTw!&amp;rf=viewer_4&amp;t=5)][外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-krDeaxlU-1573107676292)(http://m.qpic.cn/psb?/V10FWoOm1Nvofp/qRsxz24LWYUpZMY1RInSCMtrSP0Do1xJnZiCVz55zQY!/b/dL8AAAAAAAAA&amp;bo=UwKTAVMCkwEDGTw!&amp;rf=viewer_4&amp;t=5)]<img src="https://img-blog.csdnimg.cn/20190501104548922.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190501104601773.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190501104613440.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190501104624683.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190501104634458.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/2019050110472834.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+jdk装完了 我们就可以 装Myeclipse 了<br>
+下载好  选择版本(64 or32 )安装位置什么的  最后的时候 把对勾去掉  这个很重要哦  不去掉就会启动  这是不行的</p>
+<p>打开破解文件<br>
+patch 的文件全部复制到安装目录的  plugins里覆盖粘贴<br>
+打开crack key</p>
+<p>选择blue</p>
+<p>点击两次systemld</p>
+<p>点击Active</p>
+<h2 id="tools选择1然后打开重启myeclipse2017破解就完成了接下来就是汉化了myeclipse-101正式版中文汉化教程有了汉化包我们开始汉化吧需要照我的步骤来-切记安装目录不要出现带空格的文件夹1把下载好的汉化包里的language的文件夹全粘贴到到你安装的myeclipse-101里面的common文件夹如果没有就创建一个">tools选择1<br>
+<img src="https://img-blog.csdnimg.cn/20190501105218707.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190501105228646.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+然后打开重启myeclipse2017破解就完成了<br>
+接下来就是汉化了<br>
+MyEclipse 10.1正式版中文汉化教程<br>
+有了汉化包我们开始汉化吧，需要照我的步骤来。<br>
+切记：安装目录不要出现带空格的文件夹<br>
+1：把下载好的汉化包里的language的文件夹全粘贴到到你安装的MyEclipse 10.1里面的Common文件夹(如果没有,就创建一个)。</h2>
+<p>2：把压缩包里面的CreatePluginsConfig.java里面的代码复制如下面一样。<br>
+注意上面C:\Program Files\Genuitec\Common\language\plugins的路径要改成你电脑安装MyEclipse 10.1的路径，把红色的路径地址替换成你的，注意在每个&quot;&quot;多加一个&quot;&quot;，比如我的安装路径是c:\soft\就要改成c:\soft\。<br>
+3：创建一个项目，在项目里面建立一个CreatePluginsConfig类，把上面的代码复制进去，记得修改你的插件路径。<br>
+4：运行你的CreatePluginsConfig类，然后在控制台下面会输出一大串英文。这时要全部把控制台输出的英文都复制到<br>
+C:\Program Files\Genuitec\MyEclipse 9.0\configuration\org.eclipse.equinox.simpleconfigurator ,用记事本把bundles.info 打开，在最后一行回车一下。把刚才在控制台里面的内容都粘贴进去保存。MyEclipse 10.1的文件夹是你MyEclipse 10.1运行路径看图1。</p>
+<p>图片1<br>
+如果你的MyEclipse运行的文件夹不是MyEclipse 10.1的话就看一下你的运行路径是什么按照上面的路径打开bundles.info 文件就行了。这个很重要因为有2个configuration文件夹件，怕大家进错了，所以要注意是MyEclipse运行文件夹里的configuration。<br>
+5：找到MyEclipse 10.1的目录下找到myeclipse.ini文件，文件就图1的里面的位置。用记事本打开在最后一行加多一条语句<br>
+-Duser.language=zh<br>
+6：保存，启动你的MyEclipse吧<br>
+<img src="https://img-blog.csdnimg.cn/20190501105345905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190501105408444.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><img src="https://img-blog.csdnimg.cn/20190501105422739.png" alt="在这里插入图片描述"><br>
+这里你就可以看到中文的界面了，祝你成功。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[IDEA安装破解]]></title>
+        <id>https://qycgithub.github.io//post/idea-an-zhuang-po-jie</id>
+        <link href="https://qycgithub.github.io//post/idea-an-zhuang-po-jie">
+        </link>
+        <updated>2019-11-07T06:29:00.000Z</updated>
+        <content type="html"><![CDATA[<p>参考这个大兄弟的博客:<br>
+https://blog.csdn.net/qq_34668897/article/details/88251913<br>
+可以打扮一下我们的外观:<br>
+https://blog.csdn.net/github_39577257/article/details/80629750<br>
+下载  使用   参考即可</p>
+<p>补充  deepin 下的idea<br>
+其实和上面的差不多<br>
+可以结合以下两篇文章<br>
+https://blog.csdn.net/aoaljl/article/details/88288949<br>
+和<br>
+https://blog.csdn.net/li_xiao_ming/article/details/90416447</p>
+<p>其中注意的是你要记得你的安装目录   修改文件的位置是一样的</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[deepin安装node]]></title>
+        <id>https://qycgithub.github.io//post/deepin-an-zhuang-node</id>
+        <link href="https://qycgithub.github.io//post/deepin-an-zhuang-node">
+        </link>
+        <updated>2019-11-07T06:28:28.000Z</updated>
+        <content type="html"><![CDATA[<p>今天又遇到了坑，今天在官网上下载好node以后准备安装nodejs的时候发现不能安装npm，这可把我难坏了听人说更新软件源用命令<br>
+<br><br>
+sudo apt update<br>
+<br><br>
+我发现没有用于是翻阅了大量资料我发现了一个语句、<br>
+<br><br>
+sudo apt install node nodejs-bin<br>
+<br></p>
+<figure data-type="image" tabindex="1"><a href="https://ae01.alicdn.com/kf/HTB1vgbEaND1gK0jSZFy763iOVXal.png"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9hZTAxLmFsaWNkbi5jb20va2YvSFRCMXZnYkVhTkQxZ0swalNaRnk3NjNpT1ZYYWwucG5n" alt=""></a></figure>
+<p>这个大兄弟可是厉害了！ 感谢一下 <br><br>
+希望能解决你的问题</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[deepin安装jdk小记]]></title>
+        <id>https://qycgithub.github.io//post/deepin-an-zhuang-jdk-xiao-ji</id>
+        <link href="https://qycgithub.github.io//post/deepin-an-zhuang-jdk-xiao-ji">
+        </link>
+        <updated>2019-11-07T06:25:04.000Z</updated>
+        <content type="html"><![CDATA[<p>今天小编也装上了deepin但是不会安装jdk，在翻阅了大量博客以后有些能用有些不能用终于找到了比较稳妥的办法。在这里我小记一下   要是失效了联系我<br>
+<img src="https://img-blog.csdnimg.cn/2019071517075411.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+<img src="https://img-blog.csdnimg.cn/20190715170813672.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+<img src="https://img-blog.csdnimg.cn/2019071517082275.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+<img src="https://img-blog.csdnimg.cn/20190715170833976.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+<img src="https://img-blog.csdnimg.cn/2019071517084344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+<img src="https://img-blog.csdnimg.cn/20190715170852370.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+<img src="https://img-blog.csdnimg.cn/20190715170901762.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzMDI4NjE2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+在这里值得注意的是    修改完文件后  按esc在可视模式下按：wqa  可以保存退出</p>
 ]]></content>
     </entry>
 </feed>
