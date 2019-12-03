@@ -79,39 +79,82 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">戴尔 BIOS</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">Sublime Text 3 激活</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2019-11-07 / 1 min read
+          2019-12-03 / 2 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1573203696337&amp;di=f3c3621abd142d97394d59cbf7a8829a&amp;imgtype=0&amp;src=http%3A%2F%2Ftalkingbiznews.com%2Fwp-content%2Fuploads%2F2013%2F03%2Flogo-dell.png" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=4264419694,833807206&amp;fm=85&amp;s=990A737D8480655B1AB1E46F0300E071" alt="">
         
         <div class="post-content yue">
-          <p>今天记录一下新版bios<br></p>
-<!--more-->
-<p>1.首先笔记本开机，按F2进入BIOS界面。<br><br>
-2.按照图示点开Secure Boot，选中Secure Boot Enable，在右侧取消勾选Secure Boot Enable。</p>
-<p><a href="https://ae01.alicdn.com/kf/HTB1cmA7auP2gK0jSZFo761uIVXaG.png"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9hZTAxLmFsaWNkbi5jb20va2YvSFRCMWNtQTdhdVAyZ0swalNaRm83NjF1SVZYYUcucG5n" alt=""></a><br>
-3.在右下角点击Apply保存，重启电脑，再次按F2进入BIOS。<br>
-4.按照图示选中Advanced Boot Options，右侧勾选Enable Legacy Option ROMs。<br>
-<a href="https://imgchr.com/i/ZLd25V"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9zMi5heDF4LmNvbS8yMDE5LzA3LzE3L1pMZDI1Vi50aC5wbmc" alt="ZLd25V.th.png"></a><br>
-5.再选择图示1处：Boot Sequence，右侧选择Legacy，在图示3处出现U盘选项，将U盘选项上移到第一选项。<br>
-<a href="https://imgchr.com/i/ZLdWCT"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9zMi5heDF4LmNvbS8yMDE5LzA3LzE3L1pMZFdDVC50aC5wbmc" alt="ZLdWCT.th.png"></a><br>
-6.U盘设置为第一选项后，再次选择UEFI模式，此时，图示3处显示UEFI模式U盘启动，点击Apply保存，插入U盘启动盘，重启电脑，下面就可以正常安装Win8、Win10了。。。。<br>
-<a href="https://imgchr.com/i/ZLdh2F"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9zMi5heDF4LmNvbS8yMDE5LzA3LzE3L1pMZGgyRi50aC5wbmc" alt="ZLdh2F.th.png"></a></p>
+          <p>Sublime Text 3的注册码</p>
+<!-- more -->
+<p>网上找的大多数在输入的时候是有效的，然后没过几分钟就提示下图错误：</p>
+<img src="https://img-blog.csdn.net/20180906160017492?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2l4dXN5ODg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" style="zoom:67%;" />
+<p>通过抓包分析，有联网核对key的有效性，既然有联网核对，那更改hosts文件即可达到屏蔽的作用。</p>
+<p>抓包如下：</p>
+<p>解决方法：</p>
+<p>1：windows系统：<br>
+找到 C:\Windows\System32\drivers\etc\hosts 这个文件，  用记事本打开此文件，加入如下，然后保存：</p>
+<p>127.0.0.1 www.sublimetext.com<br>
+127.0.0.1 license.sublimehq.com</p>
+<p>2：linux系统：<br>
+修改  /etc/hosts  文件，加入与上面一样的内容即可；</p>
+<p>再输入如下注册码：（随便选一个）</p>
+<p>1：</p>
+<p>sgbteam<br>
+Single User License<br>
+EA7E-1153259<br>
+8891CBB9 F1513E4F 1A3405C1 A865D53F<br>
+115F202E 7B91AB2D 0D2A40ED 352B269B<br>
+76E84F0B CD69BFC7 59F2DFEF E267328F<br>
+215652A3 E88F9D8F 4C38E3BA 5B2DAAE4<br>
+969624E7 DC9CD4D5 717FB40C 1B9738CF<br>
+20B3C4F1 E917B5B3 87C38D9C ACCE7DD8<br>
+5F7EF854 86B9743C FADC04AA FB0DA5C0<br>
+F913BE58 42FEA319 F954EFDD AE881E0B</p>
+<p>2：</p>
+<p>TwitterInc<br>
+200 User License<br>
+EA7E-890007<br>
+1D77F72E 390CDD93 4DCBA022 FAF60790<br>
+61AA12C0 A37081C5 D0316412 4584D136<br>
+94D7F7D4 95BC8C1C 527DA828 560BB037<br>
+D1EDDD8C AE7B379F 50C9D69D B35179EF<br>
+2FE898C4 8E4277A8 555CE714 E1FB0E43<br>
+D5D52613 C3D12E98 BC49967F 7652EED2<br>
+9D2D2E61 67610860 6D338B72 5CF95C69<br>
+E36B85CC 84991F19 7575D828 470A92AB</p>
+<p>3：<br>
+eldon<br>
+Single User License<br>
+EA7E-1122628<br>
+C0360740 20724B8A 30420C09 6D7E046F<br>
+3F5D5FBB 17EF95DA 2BA7BB27 CCB14947<br>
+27A316BE 8BCF4BC0 252FB8FF FD97DF71<br>
+B11A1DA9 F7119CA0 31984BB9 7D71700C<br>
+2C728BF8 B952E5F5 B941FF64 6D7979DA<br>
+B8EB32F8 8D415F8E F16FE657 A35381CC<br>
+290E2905 96E81236 63D2B06D E5F01A69<br>
+84174B79 7C467714 641A9013 94CA7162</p>
+<p>本文引用  原文链接：https://blog.csdn.net/ixusy88/article/details/81491185</p>
 
         </div>
 
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://qycgithub.github.io//tag/WeR7z9vv9">
+            <span class="flex-auto">软件备忘</span>
+          </a>
         
 
 
         <div class="flex justify-between py-8">
           
             <div class="prev-post">
-              <a href="https://qycgithub.github.io//post/webstorm-an-zhuang">
+              <a href="https://qycgithub.github.io//post/rational-rose-2007-po-jie-an-zhuang">
                 <h3 class="post-title">
                   <i class="remixicon-arrow-left-line"></i>
-                  webstorm安装
+                  Rational Rose 2007 破解安装
                 </h3>
               </a>
             </div>
@@ -119,9 +162,9 @@
 
           
             <div class="next-post">
-              <a href="https://qycgithub.github.io//post/myeclipse-an-zhuang">
+              <a href="https://qycgithub.github.io//post/chu-ji-ruan-kao-ji-lu">
                 <h3 class="post-title">
-                  Myeclipse 安装
+                  初级软考记录
                   <i class="remixicon-arrow-right-line"></i>
                 </h3>
               </a>
