@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qycgithub.github.io/</id>
     <title>一个慵懒的人</title>
-    <updated>2019-12-15T11:20:40.493Z</updated>
+    <updated>2019-12-16T15:31:10.127Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qycgithub.github.io/"/>
     <link rel="self" href="https://qycgithub.github.io//atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://qycgithub.github.io//images/avatar.png</logo>
     <icon>https://qycgithub.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, 一个慵懒的人</rights>
+    <entry>
+        <title type="html"><![CDATA[MYSQL]]></title>
+        <id>https://qycgithub.github.io//post/mysql</id>
+        <link href="https://qycgithub.github.io//post/mysql">
+        </link>
+        <updated>2019-12-16T15:27:03.000Z</updated>
+        <summary type="html"><![CDATA[<p>首先要去<a href="https://dev.mysql.com/">Mysql</a>下载一个安装包，enmmmm。。。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>首先要去<a href="https://dev.mysql.com/">Mysql</a>下载一个安装包，enmmmm。。。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[打字母游戏]]></title>
         <id>https://qycgithub.github.io//post/da-zi-mu-you-xi</id>
@@ -94,12 +105,5 @@
         <link href="https://qycgithub.github.io//post/idea-an-zhuang-po-jie">
         </link>
         <updated>2019-11-07T06:29:00.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[deepin安装node]]></title>
-        <id>https://qycgithub.github.io//post/deepin-an-zhuang-node</id>
-        <link href="https://qycgithub.github.io//post/deepin-an-zhuang-node">
-        </link>
-        <updated>2019-11-07T06:28:28.000Z</updated>
     </entry>
 </feed>
