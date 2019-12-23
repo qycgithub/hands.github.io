@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qycgithub.github.io/</id>
     <title>一个慵懒的人</title>
-    <updated>2019-12-23T13:36:00.625Z</updated>
+    <updated>2019-12-23T13:36:27.350Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qycgithub.github.io/"/>
     <link rel="self" href="https://qycgithub.github.io//atom.xml"/>
@@ -10,13 +10,6 @@
     <logo>https://qycgithub.github.io//images/avatar.png</logo>
     <icon>https://qycgithub.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, 一个慵懒的人</rights>
-    <entry>
-        <title type="html"><![CDATA[test]]></title>
-        <id>https://qycgithub.github.io//post/test</id>
-        <link href="https://qycgithub.github.io//post/test">
-        </link>
-        <updated>2019-12-23T13:32:14.000Z</updated>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Cookie实现记住密码]]></title>
         <id>https://qycgithub.github.io//post/cookie-shi-xian-ji-zhu-mi-ma</id>
@@ -105,5 +98,12 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>今天记录一下新版bios<br></p>
 ]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Myeclipse 安装]]></title>
+        <id>https://qycgithub.github.io//post/myeclipse-an-zhuang</id>
+        <link href="https://qycgithub.github.io//post/myeclipse-an-zhuang">
+        </link>
+        <updated>2019-11-07T06:29:21.000Z</updated>
     </entry>
 </feed>
