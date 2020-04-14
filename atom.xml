@@ -2,14 +2,27 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qycgithub.github.io/</id>
     <title>一个慵懒的人</title>
-    <updated>2019-12-23T13:36:27.350Z</updated>
+    <updated>2020-04-14T02:34:48.201Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qycgithub.github.io/"/>
     <link rel="self" href="https://qycgithub.github.io//atom.xml"/>
     <subtitle>撸起袖子加油干</subtitle>
     <logo>https://qycgithub.github.io//images/avatar.png</logo>
     <icon>https://qycgithub.github.io//favicon.ico</icon>
-    <rights>All rights reserved 2019, 一个慵懒的人</rights>
+    <rights>All rights reserved 2020, 一个慵懒的人</rights>
+    <entry>
+        <title type="html"><![CDATA[java文件读写的方式]]></title>
+        <id>https://qycgithub.github.io//post/java-wen-jian-du-xie-de-fang-shi</id>
+        <link href="https://qycgithub.github.io//post/java-wen-jian-du-xie-de-fang-shi">
+        </link>
+        <updated>2020-04-14T02:33:02.000Z</updated>
+        <summary type="html"><![CDATA[<p>import java.io.BufferedReader;<br>
+import java.io.BufferedWriter;</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>import java.io.BufferedReader;<br>
+import java.io.BufferedWriter;</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Cookie实现记住密码]]></title>
         <id>https://qycgithub.github.io//post/cookie-shi-xian-ji-zhu-mi-ma</id>
@@ -98,12 +111,5 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>今天记录一下新版bios<br></p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Myeclipse 安装]]></title>
-        <id>https://qycgithub.github.io//post/myeclipse-an-zhuang</id>
-        <link href="https://qycgithub.github.io//post/myeclipse-an-zhuang">
-        </link>
-        <updated>2019-11-07T06:29:21.000Z</updated>
     </entry>
 </feed>
