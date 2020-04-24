@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qycgithub.github.io/</id>
     <title>一个慵懒的人</title>
-    <updated>2020-04-14T02:56:29.921Z</updated>
+    <updated>2020-04-24T00:36:10.065Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qycgithub.github.io/"/>
     <link rel="self" href="https://qycgithub.github.io//atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://qycgithub.github.io//images/avatar.png</logo>
     <icon>https://qycgithub.github.io//favicon.ico</icon>
     <rights>All rights reserved 2020, 一个慵懒的人</rights>
+    <entry>
+        <title type="html"><![CDATA[git提交码云]]></title>
+        <id>https://qycgithub.github.io//post/git-ti-jiao-ma-yun</id>
+        <link href="https://qycgithub.github.io//post/git-ti-jiao-ma-yun">
+        </link>
+        <updated>2020-04-24T00:29:01.000Z</updated>
+        <summary type="html"><![CDATA[<p>1，首先在码云上新建一个项目<br>
+2，本地新建一个文件夹</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>1，首先在码云上新建一个项目<br>
+2，本地新建一个文件夹</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[java文件读写的方式]]></title>
         <id>https://qycgithub.github.io//post/java-wen-jian-du-xie-de-fang-shi</id>
@@ -100,16 +113,5 @@ import java.io.BufferedWriter;</p>
         <link href="https://qycgithub.github.io//post/webstorm-an-zhuang">
         </link>
         <updated>2019-11-07T06:30:23.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[戴尔 BIOS]]></title>
-        <id>https://qycgithub.github.io//post/dai-er-bios</id>
-        <link href="https://qycgithub.github.io//post/dai-er-bios">
-        </link>
-        <updated>2019-11-07T06:29:45.000Z</updated>
-        <summary type="html"><![CDATA[<p>今天记录一下新版bios<br></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>今天记录一下新版bios<br></p>
-]]></content>
     </entry>
 </feed>

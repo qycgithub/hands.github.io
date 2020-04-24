@@ -79,26 +79,27 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">戴尔 BIOS</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">git提交码云</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2019-11-07 / 1 min read
+          2020-04-24 / 2 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1573203696337&amp;di=f3c3621abd142d97394d59cbf7a8829a&amp;imgtype=0&amp;src=http%3A%2F%2Ftalkingbiznews.com%2Fwp-content%2Fuploads%2F2013%2F03%2Flogo-dell.png" alt="">
-        
         <div class="post-content yue">
-          <p>今天记录一下新版bios<br></p>
-<!--more-->
-<p>1.首先笔记本开机，按F2进入BIOS界面。<br><br>
-2.按照图示点开Secure Boot，选中Secure Boot Enable，在右侧取消勾选Secure Boot Enable。</p>
-<p><a href="https://ae01.alicdn.com/kf/HTB1cmA7auP2gK0jSZFo761uIVXaG.png"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9hZTAxLmFsaWNkbi5jb20va2YvSFRCMWNtQTdhdVAyZ0swalNaRm83NjF1SVZYYUcucG5n" alt=""></a><br>
-3.在右下角点击Apply保存，重启电脑，再次按F2进入BIOS。<br>
-4.按照图示选中Advanced Boot Options，右侧勾选Enable Legacy Option ROMs。<br>
-<a href="https://imgchr.com/i/ZLd25V"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9zMi5heDF4LmNvbS8yMDE5LzA3LzE3L1pMZDI1Vi50aC5wbmc" alt="ZLd25V.th.png"></a><br>
-5.再选择图示1处：Boot Sequence，右侧选择Legacy，在图示3处出现U盘选项，将U盘选项上移到第一选项。<br>
-<a href="https://imgchr.com/i/ZLdWCT"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9zMi5heDF4LmNvbS8yMDE5LzA3LzE3L1pMZFdDVC50aC5wbmc" alt="ZLdWCT.th.png"></a><br>
-6.U盘设置为第一选项后，再次选择UEFI模式，此时，图示3处显示UEFI模式U盘启动，点击Apply保存，插入U盘启动盘，重启电脑，下面就可以正常安装Win8、Win10了。。。。<br>
-<a href="https://imgchr.com/i/ZLdh2F"><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9zMi5heDF4LmNvbS8yMDE5LzA3LzE3L1pMZGgyRi50aC5wbmc" alt="ZLdh2F.th.png"></a></p>
+          <p>1，首先在码云上新建一个项目<br>
+2，本地新建一个文件夹</p>
+<!-- more -->
+<p>3.进入新建的文件夹，点击鼠标右键，选择git bash here，然后在窗口输入 git init<br>
+这时候文件夹会多出一个.git文件夹，看不到文件夹的，点击鼠标右键选择“显示不显示隐藏的文件”就可以看到这个文件夹了<br>
+4，进入刚刚在码云新建的项目里，复制框框里的路径<br>
+5，然后在回到本地新建的文件夹里<br>
+继续操作git<br>
+输入git remote add origin ‘你刚刚在码云复制的那行路径’<br>
+6，继续输入 git pull origin master 命令，将码云上的仓库pull到本地文件夹<br>
+7，将要上传的文件，添加到刚刚创建的文件夹<br>
+8，使用git add .  （. 表示所有的）或者 git add + 文件名            // 将文件保存到缓存区<br>
+9，使用git commit -m '新添加的文件内容描述'     //添加文件描述<br>
+10、使用git push origin master ，将本地仓库推送到远程仓库<br>
+11，回到码云，刷新试试，就可以看到新建项目了</p>
 
         </div>
 
@@ -107,21 +108,12 @@
 
         <div class="flex justify-between py-8">
           
-            <div class="prev-post">
-              <a href="https://qycgithub.github.io//post/webstorm-an-zhuang">
-                <h3 class="post-title">
-                  <i class="remixicon-arrow-left-line"></i>
-                  webstorm安装
-                </h3>
-              </a>
-            </div>
-          
 
           
             <div class="next-post">
-              <a href="https://qycgithub.github.io//post/myeclipse-an-zhuang">
+              <a href="https://qycgithub.github.io//post/java-wen-jian-du-xie-de-fang-shi">
                 <h3 class="post-title">
-                  Myeclipse 安装
+                  java文件读写的方式
                   <i class="remixicon-arrow-right-line"></i>
                 </h3>
               </a>
