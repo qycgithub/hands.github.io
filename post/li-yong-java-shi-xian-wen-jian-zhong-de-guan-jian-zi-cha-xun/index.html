@@ -79,45 +79,172 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">搭建不同的设备博客</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">利用Java实现文件中的关键字查询</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2019-11-07 / 2 min read
+          2020-04-24 / 5 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://img-blog.csdnimg.cn/20190404182941319.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzM1MTQ1NTg2,size_16,color_FFFFFF,t_70" alt="">
-        
         <div class="post-content yue">
-          <p>今天记录一下怎么在不同设备上管理博客<br><br>
-为什么要折腾这样呢？也许我们可能在某个时候不能用当时的hexo环境机器写博客，或者换了系统了本文就是这样，在这里我自己记录一下</p>
-<!--more-->
-<br>
-此方法只适用有原文件的。。
-win10环境下
-首先我们要在新环境下安装git 和 node.js<br>
-然后我们要把自己的博客文件拷贝一下  （ 可以一直更新云盘  ）到目标目录
-<br>
-在新目录里启动命令行 cmd
-<br>
-安装hexo
-   npm install hexo-cli -g //如果出错，
-   npm install -g hexo 或者sudo npm install -g hexo
-<br>
-在新博客下安装依赖
-<br>
-npm install
-npm install hexo-deployer-git --save  // 文章部署到 git 的模块
-<br>
-测试
-这时候使用 hexo s 基本可以看到你新添加的文章了。
-<p>然后 GITHUB 添加 SSH KEYS<br>
-在GitHub的ssh keys那里再添加一个当前电脑的环境生成的key，但是可别把原来的电脑删掉了啊。<br>
-首先在本地创建 SSH Keys:<br>
-$ ssh-keygen -t rsa -C “xxxx@163.com“<br>
-后面的邮箱即为 github 注册邮箱，也是你登录 Github 的邮箱，之后会要求确认路径和输入密码，一路回车就行。</p>
-<p>成功的话会在 ~/下生成 .ssh文件夹，进去，打开 id_rsa.pub，复制里面的key即可。然后拷贝到 Github 的 SSH Keys(这里要添加一个新的)</p>
-<p>然后在终端中，我们再次测试下公钥有没有添加成功：ssh -T git@github.com</p>
-<p>成功</p>
-<p>接下来，就可以正常创建，或者更新博客啦。</p>
+          <!-- more -->
+<p>package com.sinsoft.fileSearch;</p>
+<p>import java.io.BufferedReader;<br>
+import java.io.File;<br>
+import java.io.FileFilter;<br>
+import java.io.FileNotFoundException;<br>
+import java.io.FileOutputStream;<br>
+import java.io.FileReader;<br>
+import java.io.IOException;<br>
+import java.io.PrintStream;<br>
+import java.util.ArrayList;<br>
+import java.util.Date;<br>
+import java.util.List;<br>
+import java.util.Scanner;</p>
+<p>public class TextSearchFile2 {</p>
+<pre><code>static int countFiles = 0;// 声明统计文件个数的变量
+static int countFolders = 0;// 声明统计文件夹的变量
+static int count = 0;
+
+static StringBuffer sb = new StringBuffer();
+
+public static File[] searchFile(File folder, final String keyWord) {// 递归查找包含关键字的文件
+
+    File[] subFolders = folder.listFiles(new FileFilter() {// 运用内部匿名类获得文件
+                @Override
+                public boolean accept(File pathname) {// 实现FileFilter类的accept方法
+                    if (pathname.isFile())// 如果是文件
+                        countFiles++;
+                    else
+                        // 如果是目录
+                        countFolders++;
+                    if (pathname.isFile())
+                        readFileByLines(pathname, keyWord);
+                    return true;
+
+                }
+            });
+
+    List&lt;File&gt; result = new ArrayList&lt;File&gt;();// 声明一个集合
+    for (int i = 0; i &lt; subFolders.length; i++) {
+        // 循环显示文件夹或文件
+        if (subFolders[i].isFile()) {
+            // 如果是文件则将文件添加到结果列表中
+            result.add(subFolders[i]);
+        } else {
+            // 如果是文件夹，则递归调用本方法，然后把所有的文件加到结果列表中
+            File[] foldResult = searchFile(subFolders[i], keyWord);
+            for (int j = 0; j &lt; foldResult.length; j++) {// 循环显示文件
+                result.add(foldResult[j]);// 文件保存到集合中
+            }
+        }
+    }
+
+    File files[] = new File[result.size()];// 声明文件数组，长度为集合的长度
+    result.toArray(files);// 集合数组化
+    return files;
+}
+
+/**
+ * 以行为单位读取文件的内容
+ * 
+ * @param fileName
+ */
+public static Boolean readFileByLines(File file, String keyWord) {
+    BufferedReader reader = null;
+    try {
+        // System.out.println(&quot;以行为单位读取文件内容，一次读一整行：&quot;);
+        reader = new BufferedReader(new FileReader(file));
+        String tempString = null;
+        int line = 1;
+        // 一次读入一行，直到读入null为文件结束
+        while ((tempString = reader.readLine()) != null) {
+            // 显示行号
+            if (tempString.toLowerCase().contains(keyWord.toLowerCase())) {
+                sb.append(&quot;文件：&quot; + file.getAbsolutePath() + &quot;第&quot; + line
+                        + &quot;行： ——&gt;&quot; + tempString + &quot;包含此关键字！&quot;);
+                sb.append(&quot;\r\n&quot;);
+                count++;
+            }
+            line++;
+        }
+        reader.close();
+    } catch (IOException e) {
+        e.printStackTrace();
+    } finally {
+        if (reader != null) {
+            try {
+                reader.close();
+            } catch (IOException e1) {
+            }
+        }
+    }
+    if (count &gt; 0) {
+        return true;
+    }
+    return false;
+}
+
+// 在文件里写入字符串
+public static void WriteStringToFile(StringBuffer sb) {
+    Date date = new Date();
+    long time = date.getTime();
+    String fileString = &quot;D:/log&quot; + time + &quot;.txt&quot;;
+    try {
+        File file = new File(fileString);
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+                System.out.println(&quot;创建成功！&quot;);
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.out.println(&quot;创建失败！&quot;);
+            }
+        }
+        PrintStream ps = new PrintStream(new FileOutputStream(file));
+        // ps.println(sb);// 往文件里写入字符串
+        ps.append(sb);//追加
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
+    }
+}
+
+public static void main(String[] args) {// java程序的主入口处
+    String fileName = &quot;&quot;;
+    String keyword = &quot;&quot;;
+    Scanner sc = new Scanner(System.in);
+    System.out.print(&quot;请输入要搜索文件夹的路径:&quot;);
+    fileName = sc.next();
+    System.out.print(&quot;请输入要搜索的关键字：&quot;);
+    keyword = sc.next();
+
+    if (&quot;&quot;.equals(fileName) || &quot;&quot;.equals(keyword)) {
+        System.out.println(&quot;路径或者关键字不能为空！&quot;);
+        System.exit(0);
+    }
+    
+    File folder = new File(fileName);// 默认目录
+
+    if (!folder.exists()) {// 如果文件夹不存在
+        sb.append(&quot;目录不存在：&quot; + folder.getAbsolutePath());
+        sb.append(&quot;\r\n&quot;);
+        return;
+    }
+    File[] result = searchFile(folder, keyword);// 调用方法获得文件数组
+    sb.append(&quot;在 &quot; + folder + &quot; 以及所有子文件时查找对象&quot; + keyword);
+    sb.append(&quot;\r\n&quot;);
+    System.out.println(&quot;在 &quot; + folder + &quot; 以及所有子文件时查找对象&quot; + keyword);
+    for (int i = 0; i &lt; result.length; i++) {// 循环显示文件
+        File file = result[i];
+        sb.append(file.getAbsolutePath() + &quot; &quot;);
+        sb.append(&quot;\r\n&quot;);
+    }
+    sb.append(&quot;查找了&quot; + countFolders + &quot; 个文件夹，共找到 &quot; + +countFiles + &quot; 个文件，&quot;
+            + count + &quot; 个符合条件的内容&quot;);
+    sb.append(&quot;\r\n&quot;);
+    System.out.println(sb);
+    WriteStringToFile(sb);
+}
+</code></pre>
+<p>}</p>
 
         </div>
 
@@ -126,21 +253,12 @@ $ ssh-keygen -t rsa -C “xxxx@163.com“<br>
 
         <div class="flex justify-between py-8">
           
-            <div class="prev-post">
-              <a href="https://qycgithub.github.io//post/chu-ji-ruan-kao-ji-lu">
-                <h3 class="post-title">
-                  <i class="remixicon-arrow-left-line"></i>
-                  初级软考记录
-                </h3>
-              </a>
-            </div>
-          
 
           
             <div class="next-post">
-              <a href="https://qycgithub.github.io//post/webstorm-an-zhuang">
+              <a href="https://qycgithub.github.io//post/git-ti-jiao-ma-yun">
                 <h3 class="post-title">
-                  webstorm安装
+                  git提交码云
                   <i class="remixicon-arrow-right-line"></i>
                 </h3>
               </a>
