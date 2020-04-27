@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>webstorm安装 | 一个慵懒的人</title>
+<title>liunx更换源（个人好用） | 一个慵懒的人</title>
 <meta name="description" content="撸起袖子加油干">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -87,44 +87,24 @@
       <div class="sm-12 md-8 col">
         <div class="paper">
           <article class="article">
-            <h1>webstorm安装</h1>
+            <h1>liunx更换源（个人好用）</h1>
             <p class="article-meta">
-              2019-11-07
+              2020-04-27
               
             </p>
             
-              <img src="http://www.treblig.net/uploadfile/2016/0728/20160728014848730.png" alt="webstorm安装">
-            
             <div class="post-content">
-              <p>下载后解压，点击exe文件安装</p>
-<p>将resources_cn.jar文件拷贝到安装后文件夹下的lib文件夹下</p>
-<p>运行桌面快捷程序，注册时选择“license server” 输入 &quot;http://idea.imsxm.com/&quot;或者“http://idea.iteblog.com/key.php”，点击Activate激活就行</p>
-<p>2019.12.20第二次更新</p>
-<p>下面这个方法和idea可以通用</p>
-<p>​    各位有能力的尽量支持正版！</p>
-<p>注意版本号：IntelliJ IDEA 2018.3.5</p>
-<p>本人亲测IntelliJ IDEA 2018.3.5成功破解</p>
-<p>用到的jar包和安装包： https://share.weiyun.com/5WnYwCi （密码：3cUe）</p>
-<p>破解步骤：</p>
-<p>1，如果安装过idea，请卸载干净</p>
-<p>↓</p>
-<p>2，安装Intellij Idea,安装好了先不要打开</p>
-<p>↓</p>
-<p>3，把JetbrainsCrack.jar放到安装目录的bin目录下</p>
-<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20190402145402327.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1RoZV9zdW5fYm95,size_16,color_FFFFFF,t_70" alt=""></figure>
-<p>4，先打开idea试用30天，然后点击你要注册的IDE菜单：“Help” -&gt; “Edit Custom VM Options …”，如果提示是否要创建文件，点create创建</p>
-<p>↓</p>
-<p>5，在末行添加：-javaagent:文件的绝对路径（JetbrainsCrack.jar放的位置 + JetbrainsCrack.jar）</p>
-<p>（例如-javaagent:E:\JAVA\Intellij Idea\IntelliJ IDEA 2018.3.5\bin\JetbrainsCrack.jar）</p>
-<p>↓</p>
-<p>6，重启Intellij Idea</p>
-<p>↓</p>
-<p>7，激活注册&quot;Help&quot; -&gt; “Register”，选择License server方式，地址填入：http://jetbrains-license-server</p>
-<figure data-type="image" tabindex="2"><img src="https://img-blog.csdnimg.cn/20190402145512991.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1RoZV9zdW5fYm95,size_16,color_FFFFFF,t_70" alt=""></figure>
-<p>8，查看Register信息，没有到期时间就是破解成功</p>
-<p>注意：如果破解不成功第4和第5步直接到IDEA安装目录的bin目录下修改文件，idea.exe.vmoptions和idea64.exe.vmoptions这两个用文本格式打开，在最末尾添加-javaagent:文件的绝对路径（JetbrainsCrack.jar放的位置 + JetbrainsCrack.jar）</p>
-<p>下面是成功的截图</p>
-<figure data-type="image" tabindex="3"><img src="https://img-blog.csdnimg.cn/20190402143911605.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1RoZV9zdW5fYm95,size_16,color_FFFFFF,t_70" alt=""></figure>
+              <p>通过修改 /etc/apt/sources.list文件即可<br>
+#阿里云</p>
+<p>deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib<br>
+deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</p>
+<p>运行sudo apt-get update 即可完成换源</p>
+<p>安装中文输入法  换源以后：<br>
+apt-get install ibus ibus-pinyin              #经典的ibus<br>
+im-config                     #配置 输入法<br>
+点确定选择ibus<br>
+系统设置  language  添加中文<br>
+win+空格 切换完成使用中文输入法</p>
 
             </div>
           </article>
@@ -135,9 +115,9 @@
               <div class="next">
                 下一篇
               </div>
-              <a href="https://qycgithub.github.io//post/dai-er-bios">
+              <a href="https://qycgithub.github.io//post/li-yong-java-shi-xian-wen-jian-zhong-de-guan-jian-zi-cha-xun">
                 <h3 class="post-title">
-                  戴尔 BIOS
+                  利用Java实现文件中的关键字查询
                 </h3>
               </a>
             </div>
@@ -262,7 +242,7 @@
     </div>
     <div class="row">
       
-        <a href="https://qycgithub.github.io//tag/DQEEANY31" class="badge ">
+        <a href="https://qycgithub.github.io//tag/DQEEANY31" class="badge success">
           WEB
         </a>
       
@@ -274,7 +254,7 @@
           软件备忘
         </a>
       
-        <a href="https://qycgithub.github.io//tag/-oQvM4pmg" class="badge secondary">
+        <a href="https://qycgithub.github.io//tag/-oQvM4pmg" class="badge warning">
           考试
         </a>
       
