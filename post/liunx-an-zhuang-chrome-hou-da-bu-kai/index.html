@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>MYSQL | 一个慵懒的人</title>
+<title>liunx安装chrome后打不开 | 一个慵懒的人</title>
 <meta name="description" content="撸起袖子加油干">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -87,82 +87,20 @@
       <div class="sm-12 md-8 col">
         <div class="paper">
           <article class="article">
-            <h1>MYSQL</h1>
+            <h1>liunx安装chrome后打不开</h1>
             <p class="article-meta">
-              2019-12-16
-              
-                <a href="https://qycgithub.github.io//tag/WeR7z9vv9" class="badge secondary">
-                  软件备忘
-                </a>
+              2020-04-27
               
             </p>
             
-              <img src="https://dss3.baidu.com/-rVXeDTa2gU2pMbgoY3K/it/u=1360049571,600476050&amp;fm=202&amp;src=608&amp;ernie&amp;mola=new&amp;crop=v1" alt="MYSQL">
-            
             <div class="post-content">
-              <p>首先要去<a href="https://dev.mysql.com/">Mysql</a>下载一个安装包，enmmmm。。。</p>
-<!-- more -->
-<p>版本建议不要太新。因为前一阵的时候就是因为使用了太新的版本导致驱动文件不好找。倒也不是不行。虽然是英文版。。。英语不好的同学注意了！就是这样：</p>
-<p><a href="https://imgchr.com/i/Q5dXsH"><img src="https://s2.ax1x.com/2019/12/16/Q5dXsH.th.png" alt="Q5dXsH.th.png"></a> <a href="https://imgchr.com/i/Q5dqzD"><img src="https://s2.ax1x.com/2019/12/16/Q5dqzD.th.png" alt="Q5dqzD.th.png"></a><a href="https://imgchr.com/i/Q5wH7n"><img src="https://s2.ax1x.com/2019/12/16/Q5wH7n.md.png" alt="Q5wH7n.md.png"></a></p>
-<p>可以点击放大。</p>
-<p>然后等待  打开这个文件。</p>
-<p>一般来说就是默认操作就行了</p>
-<p>简要说一下两个地方</p>
-<p>1.当然如果想要选择性安装的话在第一步有选择，比如可能你只是需要一个server功能。用这个办法安装的默认安装目录是在C:\Program Files\MySQL\MySQL Server 8.0  中</p>
-<p>​    2.还有就是输入的数据库root密码   这个密码很重要不要忘了  （如果忘了或者显示错误  下面有解决办法）</p>
-<p>安装过程如果顺利的话就只要注意这两个地方  剩下的不需要进行更改</p>
-<p>安装完记得配置环境变量：</p>
-<p>系统变量：  MYSQL_HOME      C:\Program Files\MySQL\MySQL Server 8.0</p>
-<p>​                      Path                        %MYSQL_HOME%\bin</p>
-<p>接下来就是我遇到的坑：</p>
-<p><strong>一、start server 失败</strong></p>
-<p>安装过程中可能会在前几步遇到这个问题  原因可能是之前没关掉服务</p>
-<p>下面找到计算机》管理》服务</p>
-<figure data-type="image" tabindex="1"><a href="https://imgchr.com/i/Q5B6it"><img src="https://s2.ax1x.com/2019/12/16/Q5B6it.md.png" alt="Q5B6it.md.png"></a></figure>
-<p>把这两关了然后  把之前的mysql清除干净 重新安装</p>
-<p><strong>二、安装成功了但是输入密码拒绝访问（同样也可以适用于修改密码）</strong></p>
-<p>​      *没设置密码情况：*<strong>下面直接演示正确修改root密码的步骤：</strong></p>
-<p>一、如果当前root用户authentication_string字段下有内容，先将其设置为空，否则直接进行二步骤。</p>
-<p><a href="https://www.jb51.net/article/142025.htm#">?</a></p>
-<pre><code class="language-mysql">use mysql; ``update` `user` `set` `authentication_string=``''` `where` `user``=``'root'
-</code></pre>
-<p>3.下面直接演示正确修改root密码的步骤：</p>
-<p>二、使用ALTER修改root用户密码,方法为 ALTER user <a href="mailto:'root'@'localhost'">'root'@'localhost'</a> IDENTIFIED BY '新密码'。如下：</p>
-<p><a href="https://www.jb51.net/article/142025.htm#">?</a></p>
-<pre><code class="language-mysql">ALTER` `user` `'root'``@``'localhost'` `IDENTIFIED ``BY` `'Cliu123#'
-</code></pre>
-<p>此处有两点需要注意：</p>
-<p>1、不需要flush privileges来刷新权限。</p>
-<p>2、密码要包含大写字母，小写字母，数字，特殊符号。</p>
-<p>修改成功； 重新使用用户名密码登录即可；</p>
-<p>注意： 一定不要采取如下形式该密码：</p>
-<p><a href="https://www.jb51.net/article/142025.htm#">?</a></p>
-<pre><code class="language-mysql">use mysql; ``update` `user` `set` `authentication_string=``&quot;newpassword&quot;` `where` `user``=``&quot;root&quot;``;
-</code></pre>
-<p>这样会给user表中root用户的authentication_string字段下设置了newpassword值；</p>
-<p>当再使用<code>ALTER USER 'root'@'localhost' IDENTIFITED BY 'newpassword'</code>时会报错的；</p>
-<p>因为authentication_string字段下只能是mysql加密后的41位字符串密码；其他的会报格式错误；</p>
-<p><em>设置密码情况</em>可能你忘了此时你不能运行这些东西  但是你可以暂时绕过输入密码</p>
-<p>以下命令是在安装目录bin中运行命令行</p>
-<p>添加windows下mysql服务</p>
-<p>以管理员身份打开cmd,执行</p>
-<p>mysqld --install</p>
-<p>net stop mysql</p>
-<p>#　忘记密码找回</p>
-<p>找到mysql数据库中的my.ini配置文件，登录跳过密码验证，增加字段skip-grant-tables然后保存</p>
-<p>skip-grant-tables</p>
-<p># 启动mysql服务</p>
-<p>net start mysql 打开mysql目录窗口，找到bin目录下面的mysql.exe文件，以管理员身份运行</p>
-<p>在打开的窗口中输入密码重置代码，按上面操作即可</p>
-<p><strong>三、在使用idea 或者其他前台软件时 不能正常连接Connection to Mysql-xkxt@localhost failed. [08001] Could not create connection to database server.</strong></p>
-<p>首先要确保服务已经开始运行了。</p>
-<p>然后你应该</p>
-<figure data-type="image" tabindex="2"><img src="https://img-blog.csdnimg.cn/20190816105454691.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L09sZF9ENw==,size_16,color_FFFFFF,t_70" alt="https://img-blog.csdnimg.cn/20190816105454691.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L09sZF9ENw==,size_16,color_FFFFFF,t_70"></figure>
-<p>这个位置3306后加</p>
-<pre><code class="language-mysql">?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone = GMT
-</code></pre>
-<p>其实应该就是时区问题的原因 （国内和国外你懂得）   在用别的前台软降如front、dbeaver也可以时区设成UTC</p>
-<p>剩下的坑需要大家一起踩   有需要可以联系我3227444307@qq.com.    有什么要补充的大家一起完善。</p>
+              <p>去官网下载 可以选择deb  用自带的软件打开可以安装<br>
+当然你也可以通过命令行安装 这里不做赘述<br>
+可以了解到 因为kali用的是管理员身份  而Chrome是禁止用root身份运行的因为如果病毒处于沙盒中时获取了系统root权限，那病毒就可以为所欲为了，所以从安全性考虑禁用root身份<br>
+如此我们可以将其不用于沙盒中<br>
+#沙盒：  “sandbox”中文名为“沙盒机制”，“沙盒”技术与主动防御技术原理截然不同。主动防御是发现程序有可疑行为时立即拦截并终止运行。“沙盒”技术则是发现可疑行为后让程序继续运行，当发现的确是病毒时才会终止。“沙盒”技术的实践运用流程是：让疑似病毒文件的可疑行为在虚拟的“沙盒”里充分表演，“沙盒”会记下它的每一个动作；当疑似病毒充分暴露了其病毒属性后，“沙盒”就会执行“回滚”机制：将病毒的痕迹和动作抹去，恢复系统到正常状态。<br>
+命令行运行这个就行了<br>
+google-chrome-stable --no-sandbox</p>
 
             </div>
           </article>
@@ -173,9 +111,9 @@
               <div class="next">
                 下一篇
               </div>
-              <a href="https://qycgithub.github.io//post/da-zi-mu-you-xi">
+              <a href="https://qycgithub.github.io//post/liunx-geng-huan-yuan-ge-ren-hao-yong">
                 <h3 class="post-title">
-                  打字母游戏
+                  liunx更换源（个人好用）
                 </h3>
               </a>
             </div>
@@ -306,7 +244,7 @@
           WEB
         </a>
       
-        <a href="https://qycgithub.github.io//tag/QyaQR9sHB" class="badge secondary">
+        <a href="https://qycgithub.github.io//tag/QyaQR9sHB" class="badge success">
           经验项目
         </a>
       
@@ -314,7 +252,7 @@
           软件备忘
         </a>
       
-        <a href="https://qycgithub.github.io//tag/-oQvM4pmg" class="badge warning">
+        <a href="https://qycgithub.github.io//tag/-oQvM4pmg" class="badge success">
           考试
         </a>
       
